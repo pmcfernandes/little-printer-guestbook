@@ -1,0 +1,78 @@
+:root {
+  --bg: #181b1a;
+  --fg: #c7d1cc;
+  --muted: #9a9a9a;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #ffffff;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+header {
+  background: transparent;
+}
+
+button {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--border);
+  padding: 8px 8px;
+  border-radius: 0px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #fff
+}
+
+button[aria-pressed="true"] {
+  background: #000;
+}
+
+input,
+select,
+textarea {
+  background: rgba(255, 255, 255, 1);
+  color: var(--bg);
+  border: 1px solid var(--border);
+  padding: 8px;
+  border-radius: 0px;
+}
+
+.canvas-wrapper {
+  width: 300px;
+  height: 300px;
+  border: 1px solid var(--border);
+  border-radius: 0px;
+  overflow: hidden;
+  background: #fff0; /* transparent so background shows through */
+  margin-bottom: 15px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.form {
+  display: grid;
+  gap: 8px;
+  width: 350px;
+}
+
+.message {
+  color: var(--accent);
+  font-size: 14px;
+}
