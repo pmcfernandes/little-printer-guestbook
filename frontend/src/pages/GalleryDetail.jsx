@@ -48,7 +48,7 @@ export default function GalleryDetail() {
       </div>
 
       <div style={{ marginTop: 8, textAlign: 'center' }}>
-        <h2>A fabulous drawing by {item.name || 'Untitled'}</h2>
+        <h2>{t('detail.headerText')} {item.name || 'Untitled'}</h2>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
           <ThermalPrinter
             author={item.name || 'Unknown'}

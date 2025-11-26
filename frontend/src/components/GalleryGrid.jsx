@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
-import { getGallery } from '../helpers/api'
 import { useNavigate } from 'react-router-dom'
+import { getGallery } from '../helpers/api'
 import GalleryGridItem from './GalleryGridItem'
+import { useI18n } from '../helpers/i18nContext'
 
 export default function GalleryGrid({ pageSize = 12 }) {
   const [items, setItems] = useState([])
@@ -10,6 +11,7 @@ export default function GalleryGrid({ pageSize = 12 }) {
   const [hasMore, setHasMore] = useState(true)
   const loaderRef = useRef(null)
   const fetchedPages = useRef(new Set())
+ const { t } = useI18n()
 
   const fetchPage = useCallback(async (p) => {
     // avoid fetching the same page multiple times (React strict mode double mount)
@@ -60,11 +62,11 @@ export default function GalleryGrid({ pageSize = 12 }) {
 
       <div ref={loaderRef} style={{ height: 1 }} />
       <div style={{ padding: 12, textAlign: 'center' }}>
-        {loading && 'Loading...'}
+        {loading && t('gallery.loading')}
         {!loading && hasMore && (
           <button className="btn" onClick={() => setPage(p => p + 1)}>Load more</button>
         )}
-        {!hasMore && 'No more images'}
+        {!hasMore && t('gallery.noMore')}
       </div>
     </div>
   )

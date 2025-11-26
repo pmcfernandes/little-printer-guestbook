@@ -26,7 +26,10 @@ const translations = {
       success: 'Upload successful',
       failed: 'Upload failed:'
     },
-    detail: { back: '← Back' }
+    detail: {
+      back: '← Back',
+      headerText: 'A fabulous drawing by'
+    }
   },
   pt: {
     title: 'Little Printer',
@@ -55,7 +58,10 @@ const translations = {
       success: 'Upload bem-sucedido',
       failed: 'Upload falhou:'
     },
-    detail: { back: '← Voltar' }
+    detail: {
+      back: '← Voltar',
+      headerText: 'Um desenho fabuloso por'
+     }
   }
 }
 
